@@ -1,0 +1,8 @@
+1) First create redis server on one of the main node of heroku
+
+2) Copy the link URL of heroku in index.js line 13
+
+3) give root address line as your root address
+
+4) deploy this code into each instance no need to change anything
+
