@@ -5,18 +5,34 @@ Blockchain as a Service (BaaS) is a cloud-based blockchain service for enterpris
 This project contains the following functionality:
 
 •	One-click blockchain node configuration is available on any public/private cloud server.
-•	Ability to create new blocks in the blockchain.
+
+•Ability to create new blocks in the blockchain.
+
 •	Create a Transaction Pool for a real-time list of incoming data.
+
 •	Blockchain holds all the transactions/data in the form of a shared ledger.
+
 •	Ability to store any consumer’s data securely.
+
 •	Ability to send cryptocurrency.
+
 •	Ability to prevent double-spending transactions.
+
 •	Ability to synchronize with other nodes via peer-to-peer communication using Publisher/Subscriber methodology.
+
 •	Ability to create a new public/private key pairs (wallet address) for a new user/node.
+
 •	Wallet owners can send or receive coins.
+
 •	Users can check any wallet’s balance using the wallet’s public key.
+
 •	Ability to autonomously validate blocks using a proof-of-work consensus algorithm.
+
 •	Sign Transactions with cryptography and digital signature.
+
 •	Every node can mine transaction using the proof-of-work algorithm.      
+
 •	Every blockchain operations are bind with an API.
+
 •	Ability to connect to other nodes via the internet.
+
