@@ -10,7 +10,7 @@ const TransactionMiner = require('./app/transaction-miner');
 
 const isDevelopment = process.env.ENV === 'development';
 
-const REDIS_URL = 'redis://redis-14522.c90.us-east-1-3.ec2.cloud.redislabs.com:14522'
+const REDIS_URL = 'redis-14522.c90.us-east-1-3.ec2.cloud.redislabs.com:14522'
 const DEFAULT_PORT = 3000;
 const ROOT_NODE_ADDRESS = `https://baas-csus.herokuapp.com`;
 
