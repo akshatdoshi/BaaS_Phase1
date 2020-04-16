@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
 class App extends Component {
-  state = { walletInfo: {} };
-
+ // state = { walletInfo: {} };
+/*
   componentDidMount() {
     fetch(`${document.location.origin}/api/wallet-info`)
       .then(response => response.json())
       .then(json => this.setState({ walletInfo: json }));
   }
-
+*/
   render() {
-    const { address, balance } = this.state.walletInfo;
+    //const { address, balance } = this.state.walletInfo;
 
     return (
       <div className='App'>
