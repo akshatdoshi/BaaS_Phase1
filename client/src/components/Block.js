@@ -30,13 +30,7 @@ class Block extends Component {
             ))
           }
           <br />
-          <Button
-            bsStyle="danger"
-            bsSize="small"
-            onClick={this.toggleTransaction}
-          >
-            Show Less
-          </Button>
+          
         </div>
       )
     }
@@ -45,13 +39,14 @@ class Block extends Component {
   }
 
   render() {
-    const { timestamp, hash } = this.props.block;
+    const { timestamp, hash, lasthash } = this.props.block;
 
     const hashDisplay = `${hash.substring(0, 15)}...`;
-
+    const lhash = `${lasthash.substring(0, 15)}...`;
     return (
       <div className='Block'>
         <div>Hash: {hashDisplay}</div>
+        <div>lastHash: {lhash} </div>
         <div>Timestamp: {new Date(timestamp).toLocaleString()}</div>
         {this.displayTransaction}
       </div>
