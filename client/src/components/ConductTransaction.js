@@ -4,19 +4,15 @@ import { Link } from 'react-router-dom';
 import history from '../history';
 
 class ConductTransaction extends Component {
-  state = { recipient: '' };
+  state = { name: '', email: '', covid: ''};
 
-  updateRecipient = event => {
-    this.setState({ recipient: event.target.value });
-  }
-  
   conductTransaction = () => {
-    const { recipient } = this.state;
+    const { name, email, covid } = this.state;
 
     fetch(`${document.location.origin}/api/mine`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ data: recipient })
+      body: JSON.stringify({ data: name })
     }).then(response => response.json())
       .then(json => {
         history.push('/blocks');
@@ -36,9 +32,18 @@ class ConductTransaction extends Component {
         <FormGroup>
           <FormControl
             input='text'
-            placeholder='data'
-            value={this.state.recipient}
-            onChange={this.updateRecipient}
+            placeholder='name'
+            value={this.state.name}
+          />
+          <FormControl
+            input='text'
+            placeholder='email'
+            value={this.state.email}
+          />
+          <FormControl
+            input='text'
+            placeholder='covid19'
+            value={this.state.covid}
           />
         </FormGroup>
         <div>
