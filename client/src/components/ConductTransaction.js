@@ -5,6 +5,10 @@ import history from '../history';
 
 class ConductTransaction extends Component {
   state = { name: '', email: '', covid: ''};
+  
+  updateRecipient = event => {
+    this.setState({ name: event.target.value, email: event.target.value, covid: event.target.value });
+  }
 
   conductTransaction = () => {
     const { name, email, covid } = this.state;
@@ -34,16 +38,19 @@ class ConductTransaction extends Component {
             input='text'
             placeholder='name'
             value={this.state.name}
+            onChange={this.updateRecipient}
           />
           <FormControl
             input='text'
             placeholder='email'
             value={this.state.email}
+            onChange={this.updateRecipient}
           />
           <FormControl
             input='text'
             placeholder='covid19'
             value={this.state.covid}
+            onChange={this.updateRecipient}
           />
         </FormGroup>
         <div>
