@@ -22,7 +22,12 @@ class ConductTransaction extends Component {
     fetch(`${document.location.origin}/api/mine`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ data: name })
+      body: JSON.stringify({ data: {
+                                  "name" : name,
+                                  "email" : email,
+                                  "covid" : covid
+                              } 
+                           })
     }).then(response => response.json())
       .then(json => {
         history.push('/blocks');
