@@ -7,7 +7,13 @@ class ConductTransaction extends Component {
   state = { name: '', email: '', covid: ''};
   
   updateRecipient = event => {
-    this.setState({ name: event.target.value, email: event.target.value, covid: event.target.value });
+    this.setState({ name: event.target.value });
+  }
+  updateRecipient1 = event => {
+    this.setState({ email: event.target.value});
+  }
+  updateRecipient2 = event => {
+    this.setState({ covid: event.target.value });
   }
 
   conductTransaction = () => {
@@ -44,13 +50,13 @@ class ConductTransaction extends Component {
             input='text'
             placeholder='email'
             value={this.state.email}
-            onChange={this.updateRecipient}
+            onChange={this.updateRecipient1}
           />
           <FormControl
             input='text'
             placeholder='covid19'
             value={this.state.covid}
-            onChange={this.updateRecipient}
+            onChange={this.updateRecipient2}
           />
         </FormGroup>
         <div>
