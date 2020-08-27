@@ -39,8 +39,8 @@ app.get('/api/blocks/:id', (req, res) => {
 
   const blocksReversed = blockchain.chain.slice().reverse();
 
-  let startIndex = (id-1) * 5;
-  let endIndex = id * 5;
+  let startIndex = (id-1);
+  let endIndex = length-1 ;
 
   startIndex = startIndex < length ? startIndex : length;
   endIndex = endIndex < length ? endIndex : length;
