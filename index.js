@@ -44,6 +44,11 @@ app.get('/api/blocks/:id', (req, res) => {
 
   startIndex = startIndex < length ? startIndex : length;
   endIndex = endIndex < length ? endIndex : length;
+  
+  var i;
+  for (i = 1; i < length; i++) {
+    console.log(blocksReversed.slice(i-1, i));
+  }
 
   res.json(blocksReversed.slice(startIndex, endIndex));
 });
