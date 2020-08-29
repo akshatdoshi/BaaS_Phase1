@@ -44,14 +44,16 @@ app.get('/api/blocks/:id', (req, res) => {
 
   startIndex = startIndex < length ? startIndex : length;
   endIndex = endIndex < length ? endIndex : length;
-  
-  var i;
-  for (i = 1; i < length; i++) {
-    //var obj = JSON.parse(blocksReversed.slice(i-1, i)[0]);
-    console.log((blocksReversed.slice(i-1, i)[0]).data);
-    console.log((blocksReversed.slice(i-1, i)[0]).hash);
-  } 
+  if (length > 1) {
+    var i;
+    for (i = 1; i < length; i++) {
+      //var obj = JSON.parse(blocksReversed.slice(i-1, i)[0]);
+      console.log((blocksReversed.slice(i-1, i)[0]).data);
+      console.log((blocksReversed.slice(i-1, i)[0]).hash);
+    } 
 
+  }
+  
   res.json(blocksReversed.slice(startIndex, endIndex));
 });
 
