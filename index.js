@@ -12,7 +12,7 @@ const isDevelopment = process.env.ENV === 'development';
 
 const REDIS_URL = 'redis://h:7Wl7srRZnGQexZRGYolWS7SVcDkCjDJ3@redis-19448.c17.us-east-1-4.ec2.cloud.redislabs.com:19448'
 const DEFAULT_PORT = 3000;
-const ROOT_NODE_ADDRESS = `https://baas-csus.herokuapp.com`;
+const ROOT_NODE_ADDRESS = `https://baas-csus-1.herokuapp.com`;
 
 const app = express();
 const blockchain = new Blockchain();
