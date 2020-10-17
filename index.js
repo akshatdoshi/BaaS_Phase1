@@ -10,9 +10,9 @@ const TransactionMiner = require('./app/transaction-miner');
 
 const isDevelopment = process.env.ENV === 'development';
 
-const REDIS_URL = 'redis://h:7Wl7srRZnGQexZRGYolWS7SVcDkCjDJ3@redis-19448.c17.us-east-1-4.ec2.cloud.redislabs.com:19448'
+const REDIS_URL = 'redis://:pdbd65eb1bf7bcbb87228c5e112171c5c92b69aadc17d56034d4c9121181b421e@ec2-34-231-27-104.compute-1.amazonaws.com:11889'
 const DEFAULT_PORT = 3000;
-const ROOT_NODE_ADDRESS = `https://baas-csus-1.herokuapp.com`;
+const ROOT_NODE_ADDRESS = `https://baas-csus.herokuapp.com`;
 
 const app = express();
 const blockchain = new Blockchain();
