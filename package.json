@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll",
-    "start": "node index.js && npm run clean && parcel build client/src/index.html",
+    "start": "node index.js && parcel build client/src/index.html",
     "dev": "npm run dev-client & npm run start-redis && cross-env ENV='development' nodemon index.js",
     "dev-peer": "cross-env GENERATE_PEER_PORT='true' ENV='development' nodemon index.js",
     "start-redis": "redis-server --daemonize yes",
